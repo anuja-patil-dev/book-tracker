@@ -1,1 +1,25 @@
 <p>My reading list</p>
+<form action="" class="p-4 border m-3">
+    <div  class="gap-3 mb-3">
+        <label for="title" class="">
+         Book Title
+        </label>
+        
+        <input type="text" [(ngModel)]="title" name="Title" id="title" placeholder="Book Title">
+    </div>
+    <div class="">
+        <label for=""> Status</label>
+        <div>
+            <p for="reading" class="">Reading</p>
+        <input type="radio" name="status" id="reading" [(ngModel)]="status" value="reading">
+        </div>
+        <br>
+       <div>
+         <label for="finished">Finished</label>
+        <input type="radio" name="status" [(ngModel)]="status" value="finished" id="finished">
+       </div>
+    </div>
+    <button>Add Book</button>
+    <p>{{title}}</p>
+    <p>{{status}}</p>
+</form>

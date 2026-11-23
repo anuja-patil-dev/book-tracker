@@ -6,7 +6,7 @@ export const books:book[]=[{
     status:'reading'
 },
 {
-    id:1,
+    id:2,
     title:'varane cha vagh',
     status:'finished'
 },

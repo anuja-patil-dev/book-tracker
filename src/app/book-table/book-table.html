@@ -19,7 +19,13 @@
         <input type="radio" name="status" [(ngModel)]="status" value="finished" id="finished">
        </div>
     </div>
-    <button>Add Book</button>
+    @if(title === ''){
+ <button (click)="addBook()" disabled>Add Book</button>
+    }
+    @else {
+         <button (click)="addBook()">Add Book</button>
+    }
+   
     <p>{{title}}</p>
     <p>{{status}}</p>
 </form>

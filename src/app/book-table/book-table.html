@@ -26,6 +26,29 @@
          <button (click)="addBook()">Add Book</button>
     }
    
-    <p>{{title}}</p>
-    <p>{{status}}</p>
+   <p>{{message}}</p>
 </form>
+
+<table>
+  <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Title</th>
+        <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+        @for(value of allbooks;track value.id){
+            <tr [ngClass]="value.status=='finished' ? 'bg-success' : 'bg-danger'">
+                <td>{{value.id}}</td>
+            <td>{{value.title}}</td>
+            <td>{{value.status}}</td>
+            </tr>
+        }
+        @empty {
+            <p>No books yet</p>
+        }
+    
+  </tbody>
+</table>
